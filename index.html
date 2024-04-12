@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- mobile status bar color -->
+    <meta name="theme-color" content="#fff">
+    <title>Sudoku</title>
+    <link rel="shortcut icon" href="./static/images/icon.png" type="image/x-icon">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- app css -->
+    <link rel="stylesheet" href="./sudoku.css">
+
+</head>
+
+<body>
+
+    <!-- main -->
+    <div class="main">
+        <div class="screen" id="screen">
+            <!-- start screen -->
+            <div class="startScreen active" id="startScreen">
+                <input type="text" placeholder="Nome" maxlength="11" class="inputName" id="inputName">
+                <div class="btn" id="btnLevel">
+                    Fácil
+                </div>
+                <div class="btn" id="btnContinue">Continuar</div>
+                <div class="btn btnBlue" id="btnPlay">Novo Jogo</div>
+            </div>
+
+            <div class="mainGame" id="gameScreen">
+                <div class="mainSudokuGrid">
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+                    <div class="mainGridCell"></div>
+
+                </div>
+
+                <div class="mainGameInfo">
+                    <div class="mainGameInfoBox mainGameInfoName">
+                        <span id="playerName"></span>
+                    </div>
+                    <div class="mainGameInfoBox mainGameInfoLevel">
+                        <span id="gameLevel">Fácil</span>
+                    </div>
+                </div>
+
+                <div class="mainGameInfoBox mainGameInfoTime">
+                    <span id="gameTime">10:20</span>
+                    <div class="pauseBtn" id="btnPause">
+                        <i class="bx bx-pause"></i>
+                    </div>
+                </div>
+
+                <div class="numbers">
+                    <div class="number">1</div>
+                    <div class="number">2</div>
+                    <div class="number">3</div>
+                    <div class="number">4</div>
+                    <div class="number">5</div>
+                    <div class="number">6</div>
+                    <div class="number">7</div>
+                    <div class="number">8</div>
+                    <div class="number">9</div>
+                    <div class="delete" id="btnDelete">X</div>
+                </div>
+            </div>
+            <!-- end game screen -->
+
+            <!-- pause screen -->
+            <div class="pauseScreen" id="pauseScreen">
+                <div class="btn btnBlue" id="btnResume">Continuar</div>
+                <div class="btn" id="btnNewGame">Novo Jogo</div>
+            </div>
+            <!-- end pause screen -->
+
+            <!-- result screen -->
+            <div class="resultScreen" id="resultScreen">
+                <div class="congrate">Completo</div>
+                <div class="info">Tempo</div>
+                <div id="resultTime"></div>
+                <div class="btn" id="btnNewGame2">Novo Jogo</div>
+            </div>
+            <!-- end result screen -->
+        </div>
+    </div>
+    <!-- end main -->
+
+    <script src="./static/js/constant.js"></script>
+    <script src="./static/js/sudoku.js"></script>
+    <script src="./static/js/app.js"></script>
+</body>
+
+</html>
